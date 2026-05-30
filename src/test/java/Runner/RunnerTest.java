@@ -6,13 +6,13 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = {"Steps"},
-       // tags = "@login or @group}",
-        plugin = {"html:target/cucumber-report.html"},
+        tags = "@group",
+        plugin = {"html:target/cucumber-report.html","com.TestStack.extent reports.cucumber.adapter.ExtentCucumberAdapter:"},
         monochrome = true,
         publish = true
 )
 
-public class runner extends AbstractTestNGCucumberTests {
+public class RunnerTest extends AbstractTestNGCucumberTests {
 
 }
 
