@@ -1,12 +1,12 @@
-@login,@regression
+@login @Regression @Sanity
 Feature: login
 
-  Scenario Outline:   as a user i want to login to ndosi website
-    Given i am on login
+  Scenario Outline: as a user i want to login to ndosi website
+    Given i am on the login page
     And I enter email <email>
     And I enter password <password>
-    When I click on login button
-    Then I should be logged in successfully
+    When I click login button
+    Then i should be logged in successfully
     Examples:
-      | email           | password  |
-      | admin@gmail.com | @12345678 |
+      | email             | password  |
+      | admin@gmail.com   | @12345678 |
